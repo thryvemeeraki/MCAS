@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mriduladitya Centre for Advanced Studies (MCAS)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        darkCanvas: {
+                            bg: '#121619',       /* Deep Charcoal-Slate Dark Background */
+                            card: '#182026',     /* Elevated Card Tone */
+                            border: '#2a3642',   /* Refined Dark Border */
+                            textLight: '#f8fafc',
+                            textMuted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Subtle Dark Texture Overlay */
+        .texture-dark {
+            background-color: #121619;
+            background-image: radial-gradient(#222c35 0.75px, transparent 0.75px), radial-gradient(#222c35 0.75px, #121619 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .texture-dark-alt {
+            background-color: #161d23;
+            background-image: radial-gradient(#25313c 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="texture-dark text-darkCanvas-textLight font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Navigation Header (Enhanced & More Attractive) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#121619]/85 backdrop-blur-xl border-b border-blue-500/20 transition-all duration-300 shadow-2xl shadow-black/50">
+        <div class="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between">
+            <!-- Full Name Branding -->
+            <a href="#about" class="flex items-center space-x-3 group py-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-serif font-bold text-lg shadow-lg shadow-blue-600/30 group-hover:scale-105 transition-transform duration-300">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-base md:text-lg font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight font-serif flex items-center gap-1.5">
+                        Mriduladitya <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+                    </span>
+                    <span class="text-[10px] md:text-xs text-blue-400/90 tracking-[0.2em] uppercase font-semibold group-hover:tracking-[0.25em] transition-all duration-300">Centre for Advanced Studies</span>
+                </div>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-darkCanvas-textMuted">
+                <a href="#about" class="relative py-2 hover:text-blue-400 transition-colors duration-200 group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#dedication" class="relative py-2 hover:text-blue-400 transition-colors duration-200 group">
+                    Intellectual Dedication
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#verticals" class="relative py-2 hover:text-blue-400 transition-colors duration-200 group">
+                    Research Verticals
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="relative py-2 hover:text-blue-400 transition-colors duration-200 group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- Action Button -->
+            <div>
+                <a href="#contact" class="relative inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 hover:scale-105 border border-blue-400/30">
+                    Inquire Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden border-b border-darkCanvas-border">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-950/60 text-blue-400 border border-blue-800/50 mb-6 transition-transform duration-300 hover:scale-105 shadow-inner">
+                    Futuristic Research & Educational Think-Tank
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 font-serif">
+                    Mriduladitya Centre for Advanced Studies
+                </h1>
+                <p class="text-lg md:text-xl text-darkCanvas-textMuted mb-10 leading-relaxed font-light">
+                    Bridging Humanities, Social Sciences, AI Technology, Human Behavior, Career Counselling, and Global Mobility under a unified visionary matrix. Founded and directed by <strong class="text-white">Dr. Kashmir Singh Dhankhar</strong>.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#verticals" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 hover:-translate-y-1">
+                        Explore Research Verticals
+                    </a>
+                    <a href="#dedication" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-darkCanvas-card hover:bg-[#202b34] text-slate-200 border border-darkCanvas-border font-semibold text-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40">
+                        Intellectual Dedication
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intellectual Dedication Section -->
+    <section id="dedication" class="py-24 texture-dark-alt border-b border-darkCanvas-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-5xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-blue-400 font-bold mb-3 block">Academic Inspiration</span>
+                <h3 class="text-xl md:text-3xl font-bold font-serif text-white whitespace-nowrap overflow-x-auto pb-2">Dedicated to Prof. Aditya Mukherjee & Prof. Mridula Mukherjee</h3>
+                <p class="text-darkCanvas-textMuted mt-3 text-sm">Honoring the enduring scholarly legacy of two eminent JNU historians whose rigorous intellectual traditions inspire our research framework.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Prof Aditya Mukherjee -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl relative overflow-hidden group hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 shadow-xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-bl-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
+                    <h4 class="text-xl font-bold text-white mb-2 font-serif group-hover:text-blue-400 transition-colors duration-300">Prof. Aditya Mukherjee</h4>
+                    <span class="text-xs text-blue-400 font-semibold block mb-4">Historian of Political Economy & Modern India</span>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">
+                        Former Dean of the School of Social Sciences and Chairperson of the Centre for Historical Studies at JNU, alongside serving as General President of the Indian History Congress. His seminal contributions to understanding Indian capitalism, imperial structures, and contemporary political economy form the structural anchor of MCAS's socio-technological framework.
+                    </p>
+                </div>
+                <!-- Prof Mridula Mukherjee -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl relative overflow-hidden group hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 shadow-xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-bl-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
+                    <h4 class="text-xl font-bold text-white mb-2 font-serif group-hover:text-blue-400 transition-colors duration-300">Prof. Mridula Mukherjee</h4>
+                    <span class="text-xs text-blue-400 font-semibold block mb-4">Historian of Agrarian Economies & Social Movements</span>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">
+                        Former Professor of Modern Indian History, Dean of the School of Social Sciences at JNU, and Director of the Nehru Memorial Museum & Library (NMML). Celebrated for her path-breaking studies on peasant movements and structural agrarian realities, her commitment to deep socio-historical context inspires our work in human behavior and policy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Verticals Section -->
+    <section id="verticals" class="py-24 texture-dark border-b border-darkCanvas-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-blue-400 font-bold mb-3 block">Multidisciplinary Matrix</span>
+                <h3 class="text-3xl font-bold font-serif text-white">Core Research Divisions</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Vertical 1 -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 group shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-6 text-lg border border-blue-800/40 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">01</div>
+                    <h4 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Humanities & Social Sciences</h4>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">Investigating structural transformations, cultural evolution, and institutional resilience in the contemporary hyper-digital era.</p>
+                </div>
+                <!-- Vertical 2 -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 group shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-6 text-lg border border-blue-800/40 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">02</div>
+                    <h4 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">AI & Technology Ethics</h4>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">Pioneering ethical frameworks for machine intelligence, data autonomy, and human-centric technological integration.</p>
+                </div>
+                <!-- Vertical 3 -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 group shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-6 text-lg border border-blue-800/40 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">03</div>
+                    <h4 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Psychology & Human Behavior</h4>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">Analyzing cognitive behavior, mental wellness systems, and psychological adaptation models in modern societies.</p>
+                </div>
+                <!-- Vertical 4 -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 group md:col-span-1 shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-6 text-lg border border-blue-800/40 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">04</div>
+                    <h4 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Career Counselling</h4>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">Scientific psychometric mapping and strategic aptitude guidance for professional pathways in emerging global economies.</p>
+                </div>
+                <!-- Vertical 5 -->
+                <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 group md:col-span-2 shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-6 text-lg border border-blue-800/40 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">05</div>
+                    <h4 class="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Global Mobility & Immigration Research</h4>
+                    <p class="text-darkCanvas-textMuted text-sm leading-relaxed">Evidence-based studies on cross-border migration, transnational human capital flow, legal integration policies, and global talent ecosystems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder & Contact Section -->
+    <section id="contact" class="py-24 texture-dark-alt">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-blue-400 font-bold mb-3 block">Leadership</span>
+                <h3 class="text-3xl font-bold font-serif text-white mb-4">Founder & Director</h3>
+                <p class="text-xl font-semibold text-blue-400 mb-6">Dr. Kashmir Singh Dhankhar</p>
+                <p class="text-darkCanvas-textMuted text-sm leading-relaxed mb-8">
+                    Under the visionary leadership of Dr. Dhankhar, MCAS is established as a premier nexus connecting intellectual depth with practical, policy-driven technological solutions for the global community.
+                </p>
+                <div class="space-y-4 text-sm text-slate-300">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-blue-400 font-semibold">Address:</span>
+                        <span>Office No. 23, 9th Floor, Sushma Infinium, Chandigarh - Ambala Highway, Zirakpur (Mohali) Punjab 140603</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-400 font-semibold">Direct Contact:</span>
+                        <a href="tel:9911332255" class="hover:text-blue-400 transition-colors">+91 99-11-33-22-55</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-darkCanvas-card border border-darkCanvas-border p-8 rounded-2xl shadow-xl hover:border-blue-500/40 transition-all duration-300">
+                <h4 class="text-lg font-bold text-white mb-2">Connect with MCAS</h4>
+                <p class="text-darkCanvas-textMuted text-xs mb-6">Reach out for academic collaborations, research inquiries, and fellowship programs.</p>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
+                        <input type="text" class="w-full bg-[#121619] border border-darkCanvas-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-all duration-200" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                        <input type="email" class="w-full bg-[#121619] border border-darkCanvas-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-all duration-200" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Message</label>
+                        <textarea rows="4" class="w-full bg-[#121619] border border-darkCanvas-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-all duration-200" placeholder="Your inquiry..."></textarea>
+                    </div>
+                    <button type="button" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold text-sm transition-all duration-300 shadow-md shadow-blue-600/30 hover:shadow-blue-500/50 hover:scale-[1.01]">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-darkCanvas-border text-center text-xs text-slate-500 bg-[#0d1013]">
+        <p>&copy; 2026 Mriduladitya Centre for Advanced Studies (MCAS). Dedicated to the academic legacy of Prof. Aditya Mukherjee & Prof. Mridula Mukherjee. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
