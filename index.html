@@ -33,7 +33,6 @@
         }
     </script>
     <style>
-        /* Custom Subtle Light Background Texture */
         .texture-light {
             background-color: #F8F6F2;
             background-image: radial-gradient(#E8E3DD 0.75px, transparent 0.75px), radial-gradient(#E8E3DD 0.75px, #F8F6F2 0.75px);
@@ -49,23 +48,23 @@
 </head>
 <body class="texture-light text-jnuLight-textDark font-sans antialiased selection:bg-[#A84335] selection:text-white">
 
-    <!-- Navigation Header (Light Theme) -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#F8F6F2]/90 backdrop-blur-xl border-b border-[#E6E1DA] transition-all duration-300 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#F8F6F2]/95 backdrop-blur-xl border-b border-[#E6E1DA] transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             <!-- Full Name Branding -->
-            <a href="#about" class="flex items-center space-x-3 group py-2">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#A84335] to-[#7d2f25] flex items-center justify-center text-white font-serif font-bold text-lg shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#C28E5C]/30">
+            <a href="#about" class="flex items-center space-x-2 sm:space-x-3 group py-2">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#A84335] to-[#7d2f25] flex items-center justify-center text-white font-serif font-bold text-base sm:text-lg shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#C28E5C]/30 flex-shrink-0">
                     M
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-base md:text-lg font-bold tracking-tight text-[#1E1B18] group-hover:text-[#A84335] transition-colors duration-300 leading-tight font-serif flex items-center gap-1.5">
+                    <span class="text-sm sm:text-base md:text-lg font-bold tracking-tight text-[#1E1B18] group-hover:text-[#A84335] transition-colors duration-300 leading-tight font-serif flex items-center gap-1.5">
                         Mriduladitya <span class="w-1.5 h-1.5 rounded-full bg-[#A84335] inline-block animate-pulse"></span>
                     </span>
-                    <span class="text-[10px] md:text-xs text-[#8F382C] tracking-[0.2em] uppercase font-semibold group-hover:tracking-[0.25em] transition-all duration-300">Centre for Advanced Studies</span>
+                    <span class="text-[9px] sm:text-[10px] md:text-xs text-[#8F382C] tracking-[0.15em] sm:tracking-[0.2em] uppercase font-semibold">Centre for Advanced Studies</span>
                 </div>
             </a>
             
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-jnuLight-textMuted">
                 <a href="#about" class="relative py-2 hover:text-[#A84335] transition-colors duration-200 group">
                     About
@@ -85,31 +84,51 @@
                 </a>
             </nav>
 
-            <!-- Action Button -->
-            <div>
-                <a href="#contact" class="relative inline-flex items-center justify-center px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#A84335] to-[#8c352a] hover:from-[#8F382C] hover:to-[#7d2f25] transition-all duration-300 shadow-md shadow-[#A84335]/20 hover:shadow-[#A84335]/40 hover:scale-105 border border-[#C28E5C]/40">
+            <!-- Desktop Action Button & Mobile Hamburger Toggle -->
+            <div class="flex items-center space-x-3">
+                <a href="#contact" class="hidden sm:inline-flex relative items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#A84335] to-[#8c352a] hover:from-[#8F382C] hover:to-[#7d2f25] transition-all duration-300 shadow-md shadow-[#A84335]/20 hover:scale-105 border border-[#C28E5C]/40">
+                    Inquire Now
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-[#1E1B18] hover:bg-[#EAE5DF] focus:outline-none transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F8F6F2] border-b border-[#E6E1DA] px-6 py-4 space-y-3 shadow-lg">
+            <a href="#about" class="mobile-link block text-sm font-medium text-[#1E1B18] hover:text-[#A84335] py-1.5">About</a>
+            <a href="#dedication" class="mobile-link block text-sm font-medium text-[#1E1B18] hover:text-[#A84335] py-1.5">Intellectual Dedication</a>
+            <a href="#verticals" class="mobile-link block text-sm font-medium text-[#1E1B18] hover:text-[#A84335] py-1.5">Research Verticals</a>
+            <a href="#contact" class="mobile-link block text-sm font-medium text-[#1E1B18] hover:text-[#A84335] py-1.5">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="mobile-link block text-center w-full py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-[#A84335]">
                     Inquire Now
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Image Section Removed, Centered Layout) -->
-    <section id="about" class="relative pt-36 pb-24 md:pt-48 md:mb-12 overflow-hidden border-b border-[#E6E1DA]">
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#F0E6DD] text-[#8F382C] border border-[#A84335]/30 mb-6 transition-transform duration-300 hover:scale-105 shadow-sm">
+    <!-- Hero Section -->
+    <section id="about" class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 md:pt-48 md:mb-12 overflow-hidden border-b border-[#E6E1DA]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <span class="inline-flex items-center px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#F0E6DD] text-[#8F382C] border border-[#A84335]/30 mb-6 shadow-sm">
                 Academic Light Theme Edition
             </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E1B18] tracking-tight leading-[1.1] mb-6 font-serif">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1E1B18] tracking-tight leading-[1.15] mb-6 font-serif">
                 Mriduladitya Centre for Advanced Studies
             </h1>
-            <p class="text-lg md:text-xl text-jnuLight-textMuted mb-8 leading-relaxed font-light max-w-3xl mx-auto">
-                Bridging Humanities, Social Sciences, AI Technology, Human Behavior, Career Counselling, and Global Mobility under a unified visionary matrix.
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#verticals" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-[#A84335] hover:bg-[#8F382C] text-white font-semibold text-sm transition-all duration-300 shadow-md shadow-[#A84335]/20 hover:shadow-[#A84335]/40 hover:-translate-y-1">
+            <p class="text-base sm:text-lg md:text-xl text-jnuLight-textMuted mb-8 leading-relaxed font-light max-w-3xl mx-auto px-2">
+                Bridging Humanities, Social Sciences, AI Technology, Human Behavior, Career Counselling, and Global Mobility under a unified visionary matrix. Founded and directed by <strong class="text-[#1E1B18]">Dr. Kashmir Singh Dhankhar</strong>.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 px-4 sm:px-0">
+                <a href="#verticals" class="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#A84335] hover:bg-[#8F382C] text-white font-semibold text-sm transition-all duration-300 shadow-md shadow-[#A84335]/20">
                     Explore Research Verticals
                 </a>
-                <a href="#dedication" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-white hover:bg-[#F3EFE9] text-[#1E1B18] border border-[#E6E1DA] font-semibold text-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#A84335]/40 shadow-sm">
+                <a href="#dedication" class="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-[#F3EFE9] text-[#1E1B18] border border-[#E6E1DA] font-semibold text-sm transition-all duration-300 shadow-sm">
                     Intellectual Dedication
                 </a>
             </div>
@@ -117,29 +136,27 @@
     </section>
 
     <!-- Intellectual Dedication Section -->
-    <section id="dedication" class="py-24 texture-light-alt border-b border-[#E6E1DA]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-5xl mx-auto mb-16">
+    <section id="dedication" class="py-16 sm:py-24 texture-light-alt border-b border-[#E6E1DA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-5xl mx-auto mb-12 sm:mb-16">
                 <span class="text-xs uppercase tracking-widest text-[#8F382C] font-bold mb-3 block">Academic Inspiration</span>
-                <h3 class="text-xl md:text-3xl font-bold font-serif text-[#1E1B18] whitespace-nowrap overflow-x-auto pb-2">Dedicated to Prof. Aditya Mukherjee & Prof. Mridula Mukherjee</h3>
-                <p class="text-jnuLight-textMuted mt-3 text-sm">Honoring the enduring scholarly legacy of two eminent JNU historians whose rigorous intellectual traditions inspire our research framework.</p>
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-[#1E1B18] px-2 leading-snug">Dedicated to Prof. Aditya Mukherjee & Prof. Mridula Mukherjee</h3>
+                <p class="text-jnuLight-textMuted mt-3 text-xs sm:text-sm px-4">Honoring the enduring scholarly legacy of two eminent JNU historians whose rigorous intellectual traditions inspire our research framework.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
                 <!-- Prof Aditya Mukherjee -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl relative overflow-hidden group hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 shadow-md hover:shadow-xl">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#A84335]/5 rounded-bl-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
-                    <h4 class="text-xl font-bold text-[#1E1B18] mb-2 font-serif group-hover:text-[#A84335] transition-colors duration-300">Prof. Aditya Mukherjee</h4>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl relative overflow-hidden group shadow-md">
+                    <h4 class="text-lg sm:text-xl font-bold text-[#1E1B18] mb-2 font-serif">Prof. Aditya Mukherjee</h4>
                     <span class="text-xs text-[#8F382C] font-semibold block mb-4">Historian of Political Economy & Modern India</span>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">
                         Former Dean of the School of Social Sciences and Chairperson of the Centre for Historical Studies at JNU, alongside serving as General President of the Indian History Congress. His seminal contributions to understanding Indian capitalism, imperial structures, and contemporary political economy form the structural anchor of MCAS's socio-technological framework.
                     </p>
                 </div>
                 <!-- Prof Mridula Mukherjee -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl relative overflow-hidden group hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 shadow-md hover:shadow-xl">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#A84335]/5 rounded-bl-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
-                    <h4 class="text-xl font-bold text-[#1E1B18] mb-2 font-serif group-hover:text-[#A84335] transition-colors duration-300">Prof. Mridula Mukherjee</h4>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl relative overflow-hidden group shadow-md">
+                    <h4 class="text-lg sm:text-xl font-bold text-[#1E1B18] mb-2 font-serif">Prof. Mridula Mukherjee</h4>
                     <span class="text-xs text-[#8F382C] font-semibold block mb-4">Historian of Agrarian Economies & Social Movements</span>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">
                         Former Professor of Modern Indian History, Dean of the School of Social Sciences at JNU, and Director of the Nehru Memorial Museum & Library (NMML). Celebrated for her path-breaking studies on peasant movements and structural agrarian realities, her commitment to deep socio-historical context inspires our work in human behavior and policy.
                     </p>
                 </div>
@@ -148,94 +165,110 @@
     </section>
 
     <!-- Research Verticals Section -->
-    <section id="verticals" class="py-24 texture-light border-b border-[#E6E1DA]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+    <section id="verticals" class="py-16 sm:py-24 texture-light border-b border-[#E6E1DA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-xs uppercase tracking-widest text-[#8F382C] font-bold mb-3 block">Multidisciplinary Matrix</span>
-                <h3 class="text-3xl font-bold font-serif text-[#1E1B18]">Core Research Divisions</h3>
+                <h3 class="text-2xl sm:text-3xl font-bold font-serif text-[#1E1B18]">Core Research Divisions</h3>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Vertical 1 -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 group shadow-md hover:shadow-xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20 group-hover:scale-110 group-hover:bg-[#A84335] group-hover:text-white transition-all duration-300">01</div>
-                    <h4 class="text-lg font-bold text-[#1E1B18] mb-3 group-hover:text-[#A84335] transition-colors duration-300">Humanities & Social Sciences</h4>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">Investigating structural transformations, cultural evolution, and institutional resilience in the contemporary hyper-digital era.</p>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20">01</div>
+                    <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-3">Humanities & Social Sciences</h4>
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">Investigating structural transformations, cultural evolution, and institutional resilience in the contemporary hyper-digital era.</p>
                 </div>
                 <!-- Vertical 2 -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 group shadow-md hover:shadow-xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20 group-hover:scale-110 group-hover:bg-[#A84335] group-hover:text-white transition-all duration-300">02</div>
-                    <h4 class="text-lg font-bold text-[#1E1B18] mb-3 group-hover:text-[#A84335] transition-colors duration-300">AI & Technology Ethics</h4>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">Pioneering ethical frameworks for machine intelligence, data autonomy, and human-centric technological integration.</p>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20">02</div>
+                    <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-3">AI & Technology Ethics</h4>
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">Pioneering ethical frameworks for machine intelligence, data autonomy, and human-centric technological integration.</p>
                 </div>
                 <!-- Vertical 3 -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 group shadow-md hover:shadow-xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20 group-hover:scale-110 group-hover:bg-[#A84335] group-hover:text-white transition-all duration-300">03</div>
-                    <h4 class="text-lg font-bold text-[#1E1B18] mb-3 group-hover:text-[#A84335] transition-colors duration-300">Psychology & Human Behavior</h4>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">Analyzing cognitive behavior, mental wellness systems, and psychological adaptation models in modern societies.</p>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-md">
+                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20">03</div>
+                    <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-3">Psychology & Human Behavior</h4>
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">Analyzing cognitive behavior, mental wellness systems, and psychological adaptation models in modern societies.</p>
                 </div>
                 <!-- Vertical 4 -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 group md:col-span-1 shadow-md hover:shadow-xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20 group-hover:scale-110 group-hover:bg-[#A84335] group-hover:text-white transition-all duration-300">04</div>
-                    <h4 class="text-lg font-bold text-[#1E1B18] mb-3 group-hover:text-[#A84335] transition-colors duration-300">Career Counselling</h4>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">Scientific psychometric mapping and strategic aptitude guidance for professional pathways in emerging global economies.</p>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-md sm:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20">04</div>
+                    <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-3">Career Counselling</h4>
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">Scientific psychometric mapping and strategic aptitude guidance for professional pathways in emerging global economies.</p>
                 </div>
                 <!-- Vertical 5 -->
-                <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl hover:border-[#A84335] hover:-translate-y-1.5 transition-all duration-300 group md:col-span-2 shadow-md hover:shadow-xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20 group-hover:scale-110 group-hover:bg-[#A84335] group-hover:text-white transition-all duration-300">05</div>
-                    <h4 class="text-lg font-bold text-[#1E1B18] mb-3 group-hover:text-[#A84335] transition-colors duration-300">Global Mobility & Immigration Research</h4>
-                    <p class="text-jnuLight-textMuted text-sm leading-relaxed">Evidence-based studies on cross-border migration, transnational human capital flow, legal integration policies, and global talent ecosystems.</p>
+                <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-md sm:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 rounded-xl bg-[#F0E6DD] text-[#8F382C] flex items-center justify-center font-bold mb-6 text-lg border border-[#A84335]/20">05</div>
+                    <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-3">Global Mobility & Immigration Research</h4>
+                    <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed">Evidence-based studies on cross-border migration, transnational human capital flow, legal integration policies, and global talent ecosystems.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Founder & Contact Section -->
-    <section id="contact" class="py-24 texture-light-alt">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section id="contact" class="py-16 sm:py-24 texture-light-alt">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div>
                 <span class="text-xs uppercase tracking-widest text-[#8F382C] font-bold mb-3 block">Leadership</span>
-                <h3 class="text-3xl font-bold font-serif text-[#1E1B18] mb-4">Founder & Director</h3>
-                <p class="text-xl font-semibold text-[#8F382C] mb-6">Dr. Kashmir Singh Dhankhar & Dr. Hargovind Kakkar</p>
-                <p class="text-jnuLight-textMuted text-sm leading-relaxed mb-8">
+                <h3 class="text-2xl sm:text-3xl font-bold font-serif text-[#1E1B18] mb-3">Founder & Director</h3>
+                <p class="text-lg sm:text-xl font-semibold text-[#8F382C] mb-4 sm:mb-6">Dr. Kashmir Singh Dhankhar</p>
+                <p class="text-jnuLight-textMuted text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">
                     Under the visionary leadership of Dr. Dhankhar, MCAS is established as a premier nexus connecting intellectual depth with practical, policy-driven technological solutions for the global community.
                 </p>
-                <div class="space-y-4 text-sm text-[#4A433E]">
+                <div class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-[#4A433E]">
                     <div class="flex items-start space-x-3">
-                        <span class="text-[#8F382C] font-semibold">Address:</span>
+                        <span class="text-[#8F382C] font-semibold flex-shrink-0">Address:</span>
                         <span>Office No. 23, 9th Floor, Sushma Infinium, Chandigarh - Ambala Highway, Zirakpur (Mohali) Punjab 140603</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <span class="text-[#8F382C] font-semibold">Direct Contact:</span>
+                        <span class="text-[#8F382C] font-semibold flex-shrink-0">Direct Contact:</span>
                         <a href="tel:9911332255" class="hover:text-[#A84335] transition-colors">+91 99-11-33-22-55</a>
                     </div>
                 </div>
             </div>
-            <div class="bg-white border border-[#E6E1DA] p-8 rounded-2xl shadow-lg hover:border-[#A84335]/40 transition-all duration-300">
-                <h4 class="text-lg font-bold text-[#1E1B18] mb-2">Connect with MCAS</h4>
+            <div class="bg-white border border-[#E6E1DA] p-6 sm:p-8 rounded-2xl shadow-lg">
+                <h4 class="text-base sm:text-lg font-bold text-[#1E1B18] mb-2">Connect with MCAS</h4>
                 <p class="text-jnuLight-textMuted text-xs mb-6">Reach out for academic collaborations, research inquiries, and fellowship programs.</p>
                 <form class="space-y-4">
                     <div>
                         <label class="block text-xs font-semibold text-[#4A433E] mb-1">Full Name</label>
-                        <input type="text" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335] transition-all duration-200" placeholder="Enter your name">
+                        <input type="text" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335]" placeholder="Enter your name">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#4A433E] mb-1">Email Address</label>
-                        <input type="email" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335] transition-all duration-200" placeholder="name@example.com">
+                        <input type="email" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335]" placeholder="name@example.com">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#4A433E] mb-1">Message</label>
-                        <textarea rows="4" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335] transition-all duration-200" placeholder="Your inquiry..."></textarea>
+                        <textarea rows="4" class="w-full bg-[#F8F6F2] border border-[#E6E1DA] rounded-lg px-4 py-3 text-sm text-[#1E1B18] focus:outline-none focus:border-[#A84335]" placeholder="Your inquiry..."></textarea>
                     </div>
-                    <button type="button" class="w-full py-3.5 bg-[#A84335] hover:bg-[#8F382C] text-white rounded-lg font-semibold text-sm transition-all duration-300 shadow-md shadow-[#A84335]/20 hover:shadow-[#A84335]/40 hover:scale-[1.01]">Send Inquiry</button>
+                    <button type="button" class="w-full py-3.5 bg-[#A84335] hover:bg-[#8F382C] text-white rounded-lg font-semibold text-sm transition-all shadow-md">Send Inquiry</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-[#E6E1DA] text-center text-xs text-[#6B635D] bg-[#EFECE6]">
+    <footer class="py-10 sm:py-12 border-t border-[#E6E1DA] text-center text-xs text-[#6B635D] bg-[#EFECE6] px-4">
         <p>&copy; 2026 Mriduladitya Centre for Advanced Studies (MCAS). Dedicated to the academic legacy of Prof. Aditya Mukherjee & Prof. Mridula Mukherjee. All rights reserved.</p>
     </footer>
 
+    <!-- Mobile Menu Script Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
